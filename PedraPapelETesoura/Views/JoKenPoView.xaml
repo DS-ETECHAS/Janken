@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PedraPapelETesoura.Views.JoKenPoView"
+             Title="JoKenPoView">
+    <ScrollView BackgroundColor="#f6f6f6">
+        <VerticalStackLayout Spacing="30" Padding="20">
+            <FlexLayout AlignContent="Center">
+                <Label Text="Digite seu nome" FlexLayout.AlignSelf="Center"/>
+                <Entry MinimumWidthRequest="100"/>
+            </FlexLayout>
+            <Picker x:Name="SelectOptionPicker" Title="Selecione uma opção" SelectedIndex="{Binding}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>PEDRA</x:String>
+                        <x:String>PAPEL</x:String>
+                        <x:String>TESOURA</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button Text="Jogar" BackgroundColor="#d5342a"  />
+            <BoxView Color="#d5342a"
+                HeightRequest="2"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PedraPapelETesoura.Views.AboutView"
+             Title="AboutView">
+    <VerticalStackLayout Padding="10" Spacing="30">
+        <Label Text="Jogo de pedra, papel e tesoura, elaborado na aula de PAM I, na ETEC Professor Horácio Augusto da Silveira, como atividade avaliativa prática em DUPLINHAS!!!"/>
+
+        <Frame Padding="10" BorderColor="#d5342a">
+            <VerticalStackLayout>
+                <FlexLayout AlignItems="Center" JustifyContent="SpaceBetween">
+                    <Label Text="Feito por"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        FlexLayout.AlignSelf="Center"/>
+                    <Image Source="dotnet_bot.png" WidthRequest="150" HeightRequest="150" />
+                </FlexLayout>
+                <BoxView Color="#d5342a"
+                         HeightRequest="2"
+                        HorizontalOptions="Fill" />
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Meu usuário"
+                                TextColor="Blue"
+                                TextDecorations="None">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://learn.microsoft.com/dotnet/maui/" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+            </VerticalStackLayout>
+        </Frame>
+        <!--aqui faria o bind-->
+    </VerticalStackLayout>
+</ContentPage>
