@@ -8,8 +8,8 @@ namespace PedraPapelETesoura.Models
 {
     public enum Opcao
     {
-        PEDRA,
-        PAPEL,
-        TESOURA
+        PEDRA = 0,
+        PAPEL= 1,
+        TESOURA = 2
     }
 }

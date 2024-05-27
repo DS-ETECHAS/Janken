@@ -11,5 +11,9 @@ namespace PedraPapelETesoura.Models
         public string Nome { get; set; }
         public Opcao Escolha { get; set; }
         public int Pontuação { get; set; }
+
+        public Jogador(string nome) {
+            Nome = nome;
+        }
     }
 }

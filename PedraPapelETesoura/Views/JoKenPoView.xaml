@@ -7,9 +7,9 @@
         <VerticalStackLayout Spacing="30" Padding="20">
             <FlexLayout AlignContent="Center">
                 <Label Text="Digite seu nome" FlexLayout.AlignSelf="Center"/>
-                <Entry MinimumWidthRequest="100"/>
+                <Entry MinimumWidthRequest="100" Placeholder="{Binding Name}" BackgroundColor="#fff" HorizontalOptions="FillAndExpand"/>
             </FlexLayout>
-            <Picker x:Name="SelectOptionPicker" Title="Selecione uma opção" SelectedIndex="{Binding}">
+            <Picker x:Name="SelectOptionPicker" Title="Selecione uma opção" SelectedIndex="{Binding Escolha}" BackgroundColor="#fff">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>PEDRA</x:String>
@@ -18,10 +18,20 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-            <Button Text="Jogar" BackgroundColor="#d5342a"  />
+            <Button Text="Jogar" BackgroundColor="#d5342a" Command="{Binding MakeChoiceCommand}" />
             <BoxView Color="#d5342a"
                 HeightRequest="2"
                 HorizontalOptions="Fill" />
+
+            <CollectionView EmptyView="Não foi feito nenhum jogo">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </VerticalStackLayout>
+
+
     </ScrollView>
 </ContentPage>
